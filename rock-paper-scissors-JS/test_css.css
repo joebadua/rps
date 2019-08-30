@@ -18,22 +18,28 @@ header > h1{
 }
 
 .score {
-    font-size: 25px;
+    font-size: 50px;
     text-align: center;
     position: static;
     padding: 10px;
 }
 
 #player {
+    background-color: lightgreen;
     overflow: auto;
     float:left;
     font-size: 25px;
+    padding: inherit;
+    box-shadow: 0 0 5px darkgrey;
 }
 
 #computer {
+    background-color: lightcoral; 
     overflow: auto;
     float:right;
     font-size: 25px;
+    padding: inherit;
+    box-shadow: 0 0 5px darkgrey;
 }
 
 #results {
@@ -60,16 +66,16 @@ header > h1{
     padding: 10px;
     margin: 10px auto;
     cursor: pointer;
-    background-color: lightcyan;
+    background-color: lightcyan; 
     box-shadow: 0 0 5px darkgrey;
 }
 
-.g-glow{
+.g-glow, .g-glow:hover{
     background-color: lightgreen;
     box-shadow: 0 0 5px darkgrey;
 }
 
-.r-glow {
+.r-glow, .r-glow:hover {
     background-color: lightcoral;
     box-shadow: 0 0 5px darkgrey;
 }

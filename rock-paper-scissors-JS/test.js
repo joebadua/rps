@@ -19,7 +19,7 @@ function getBothOptions(player, computer) {
     setTimeout(function() { 
         document.getElementById(player).classList.remove('g-glow');
         document.getElementById(computer).classList.remove('r-glow');
-    }, 2000)
+    }, 500)
 }
 
 function getComputerOption() {
@@ -52,7 +52,7 @@ function draw(player, computer) {
     computer_score++;
     computer_score_span.innerHTML = computer_score;
     result_div.innerHTML = "it's a draw!";
-    verdict_div.inn = "nobody wins...";
+    verdict_div.innerHTML = "nobody wins...";
 }
 
 function checkIfOver() {
