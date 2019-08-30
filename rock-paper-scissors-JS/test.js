@@ -14,16 +14,18 @@ const bold_element = document.createElement("b");
 
 
 function getBothOptions(player, computer) {
-    switch(player) {
-        case "rock":
-            setTimeout(function() {rock_div.style.backgroundColor = "lightgreen"}, 2000);
-    }
+    document.getElementById(player).classList.add('g-glow');
+    document.getElementById(computer).classList.add('r-glow');
+    setTimeout(function() { 
+        document.getElementById(player).classList.remove('g-glow');
+        document.getElementById(computer).classList.remove('r-glow');
+    }, 2000)
 }
 
 function getComputerOption() {
     const option = ['rock', 'paper', 'scissors'];
-    const randomNumber = Math.floor(Math.random() * 3);
-    return option[randomNumber];
+    const rand = Math.floor(Math.random() * 3);
+    return option[rand];
 }
 
 function win(player, computer) {
@@ -43,6 +45,7 @@ function lose(player, computer) {
                             + " does not beat " 
                             + computer.charAt(0).toUpperCase() + computer.slice(1);
     verdict_div.innerHTML = "you <b>LOSE</b>!";
+    getBothOptions(player, computer);
 }
 
 function draw(player, computer) {
@@ -84,7 +87,9 @@ function game(player) {
             draw(player, comp);
             break;        
     } 
-    checkIfOver();
+    if(checkIfOver()) {
+        verdict_div.innerHTML
+    }
 }
 
 function main() { 

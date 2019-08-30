@@ -60,7 +60,18 @@ header > h1{
     padding: 10px;
     margin: 10px auto;
     cursor: pointer;
+    background-color: lightcyan;
+    box-shadow: 0 0 5px darkgrey;
+}
+
+.g-glow{
     background-color: lightgreen;
+    box-shadow: 0 0 5px darkgrey;
+}
+
+.r-glow {
+    background-color: lightcoral;
+    box-shadow: 0 0 5px darkgrey;
 }
 
 #verdict {
