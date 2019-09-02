@@ -1,6 +1,3 @@
-let player_score = 0;
-let computer_score = 0;
-
 const player_score_span = document.getElementById("player_score");
 const computer_score_span = document.getElementById("computer_score");
 const score_board_div = document.getElementById("score");
@@ -12,6 +9,8 @@ const scissors_div = document.getElementById("scissors");
 const verdict_div = document.getElementById("verdict");
 const bold_element = document.createElement("b");
 
+let player_score = 0;
+let computer_score = 0;
 
 function getBothOptions(player, computer) {
     document.getElementById(player).classList.add('g-glow');
@@ -31,9 +30,11 @@ function getComputerOption() {
 function win(player, computer) {
     player_score++;
     player_score_span.innerHTML = player_score;
-    result_div.innerHTML = (player.charAt(0).toUpperCase() + player.slice(1)) 
-                            + " beats " 
-                            + computer.charAt(0).toUpperCase() + computer.slice(1);
+    result_div.innerHTML =  "<b>"
+                            + (player.charAt(0).toUpperCase() + player.slice(1)) 
+                            + "</b> beats <b>" 
+                            + computer.charAt(0).toUpperCase() + computer.slice(1)
+                            + "</b>";
     verdict_div.innerHTML = "you <b>WIN</b>!";
     getBothOptions(player, computer);
 }
@@ -87,9 +88,7 @@ function game(player) {
             draw(player, comp);
             break;        
     } 
-    if(checkIfOver()) {
-        verdict_div.innerHTML
-    }
+    
 }
 
 function main() { 
